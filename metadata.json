@@ -1,0 +1,6 @@
+{
+  "name": "Mining Strategy Simulator Pro",
+  "description": "Interactive Earth & Space Science simulation exploring environmental and economic trade-offs of mining strategies across distinct geological scenarios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

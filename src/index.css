@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Custom Landscape Visualizer Animations */
+  .dust-cloud {
+    animation: floatDust 8s infinite alternate ease-in-out;
+    transform-origin: center;
+  }
+
+  @keyframes floatDust {
+    0% { transform: translateX(-10px) translateY(0) scale(1) rotate(-1deg); opacity: 0.35; }
+    50% { transform: translateX(20px) translateY(-8px) scale(1.04) rotate(1deg); opacity: 0.65; }
+    100% { transform: translateX(35px) translateY(4px) scale(0.96) rotate(-0.5deg); opacity: 0.35; }
+  }
+
+  .dust-core {
+    animation: pulseCore 4s infinite alternate ease-in-out;
+  }
+
+  @keyframes pulseCore {
+    0% { opacity: 0.5; transform: scale(0.96); }
+    100% { opacity: 0.85; transform: scale(1.04); }
+  }
+
+  .acid-flow {
+    stroke-dasharray: 6;
+    animation: flowAcid 1.5s linear infinite;
+  }
+
+  @keyframes flowAcid {
+    from { stroke-dashoffset: 12; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  .water-flow-anim {
+    stroke-dasharray: 8 6;
+    animation: flowStream 1.8s linear infinite;
+  }
+
+  @keyframes flowStream {
+    from { stroke-dashoffset: 28; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  .water-ripple-anim {
+    animation: streamRipple 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes streamRipple {
+    0% { opacity: 0.6; transform: scaleY(0.95); }
+    100% { opacity: 0.95; transform: scaleY(1.05); }
+  }
+
+  .leach-plume {
+    animation: pulsePlume 3.5s infinite alternate ease-in-out;
+  }
+
+  @keyframes pulsePlume {
+    0% { opacity: 0.45; transform: scale(0.98); }
+    100% { opacity: 0.85; transform: scale(1.02); }
+  }
+
+  .progress-bar-fill {
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    15% { transform: translate(-2px, -2px) rotate(-0.5deg); }
+    30% { transform: translate(-3px, 1px) rotate(0.5deg); }
+    45% { transform: translate(3px, 2px) rotate(0deg); }
+    60% { transform: translate(1px, -1px) rotate(0.5deg); }
+    75% { transform: translate(-2px, 2px) rotate(-0.5deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+
+  .anim-shake {
+    animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  .library-highlight {
+    animation: pulseBorder 1.5s infinite alternate;
+  }
+
+  @keyframes pulseBorder {
+    0% { border-color: #f59e0b; box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3); }
+    100% { border-color: #d97706; box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.6); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
